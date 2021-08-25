@@ -167,16 +167,16 @@
   <div class="sidebar-menu-container"> 
   <ul class="list-unstyled mt-1 px-3">
       <li class="sidebar-item">
-  <a href="./index.html" class="active"><span class="chapter-title">Intro</span></a>
+  <a href="./index.html" class="active"><span class="chapter-title">Introduction</span></a>
 </li>
       <li class="sidebar-item">
-  <a href="./docs/first.html" class=""><span class="chapter-title">A Basic Quarto Doc</span></a>
+  <a href="./docs/first.html" class=""><span class="chapter-title">A qmd with R and Python</span></a>
 </li>
       <li class="sidebar-item">
-  <a href="./docs/second.html" class=""><span class="chapter-title">A Pure Python Doc</span></a>
+  <a href="./docs/second.html" class=""><span class="chapter-title">A qmd with only Python</span></a>
 </li>
       <li class="sidebar-item">
-  <a href="./docs/third.html" class=""><span class="chapter-title">Example Jupyter Notebook</span></a>
+  <a href="./docs/third.html" class=""><span class="chapter-title">A Jupyter Notebook</span></a>
 </li>
       <li class="sidebar-item">
   <a href="./docs/four.html" class=""><span class="chapter-title">Sample Analysis</span></a>
@@ -185,27 +185,80 @@
   </div>
 </nav>
   </div>
-  <div id="quarto-toc-sidebar" class="col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"></div>
+  <div id="quarto-toc-sidebar" class="col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#installing-quarto" class="nav-link active" data-scroll-target="#installing-quarto">Installing Quarto</a></li>
+<li><a href="#about-this-site" class="nav-link" data-scroll-target="#about-this-site">About this site</a></li>
+</ul>
+</nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 <header id="title-block-header">
 <div class="quarto-title-block d-none d-lg-block"><div><h1 class="title d-none d-lg-block">Example Quarto Site for R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </header>
+
 <p>This is an example Quarto project made for the Reproducible Research with R workshop at the R/Medicine conference on 8/25/2021.</p>
-<p>This is a Quarto <code>book</code> project. A <code>book</code> project is just like a site, so it uses the same styling and structure as the <code>site</code>, but it has a few extra things. Most notably, you’re able to download the entire site as a single document by clicking the download button in the upper right hand corner.</p>
+<section id="installing-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="installing-quarto">Installing Quarto</h2>
+<p>In order to work with Quarto from your own computer, you’ll need to install the Quarto CLI and a daily build of RStudio.</p>
+<ul>
+<li>You can download the latest version of the Quarto CLI from the <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">Quarto github</a>. Select the appropriate version for your OS and run the installer.</li>
+<li>You can download a daily build of RStudio <a href="https://dailies.rstudio.com/">here</a>. The daily build has support for Quarto documents that isn’t in the official release yet.</li>
+</ul>
+<p>From here, you’ll be able to render Quarto documents in RStudio just like you’ve been doing today.</p>
+<p>For full installation instructions, see <a href="https://quarto.org/docs/getting-started/installation.html">the Quarto docs</a>.</p>
+</section>
+<section id="about-this-site" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-site">About this site</h2>
+<p>This is a Quarto <code>book</code> project. You’re able to download the entire site as a single document by clicking the download button in the upper right hand corner.</p>
+<p>A Quarto project is a collection of documents (<code>qmd</code>, <code>md</code>, <code>Rmd</code>, and <code>ipynb</code> files) that are unified by a <code>_quarto.yml</code> file. This <code>_quarto.yml</code> file contains, among other things (from the docs):</p>
+<ul>
+<li>A way to render all or some of the files in a directory with a single command (e.g.&nbsp;quarto render myproject).</li>
+<li>A way to share YAML configuration across multiple documents.</li>
+<li>The ability to redirect output artifacts to another directory.</li>
+<li>The ability to freeze rendered output (i.e.&nbsp;don’t re-execute documents unless they have changed).</li>
+</ul>
+<p>You can see the <code>_quarto.yml</code> for this site <a href="https://github.com/pommevilla/r3-quarto-example/blob/main/_quarto.yml">here</a>.</p>
+<p>To learn more about Quarto projects, see the <a href="https://quarto.org/docs/projects/quarto-projects.html">Projects section</a> of the docs.</p>
 
 <!-- -->
 <div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Intro"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>This is an example Quarto project made for the Reproducible Research with R workshop at the R/Medicine conference on 8/25/2021. </span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This is a Quarto <span class="in">`book`</span> project. A <span class="in">`book`</span> project is just like a site, so it uses the same styling and structure as the <span class="in">`site`</span>, but it has a few extra things. </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Most notably, you're able to download the entire site as a single document by clicking the download button in the upper right hand corner. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Installing Quarto</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>In order to work with Quarto from your own computer, you'll need to install the Quarto CLI and a daily build of RStudio.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can download the latest version of the Quarto CLI from the <span class="co">[</span><span class="ot">Quarto github</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases/latest)</span>. Select the appropriate version for your OS and run the installer.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can download a daily build of RStudio <span class="co">[</span><span class="ot">here</span><span class="co">](https://dailies.rstudio.com/)</span>. The daily build has support for Quarto documents that isn't in the official release yet.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>From here, you'll be able to render Quarto documents in RStudio just like you've been doing today.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>For full installation instructions, see <span class="co">[</span><span class="ot">the Quarto docs</span><span class="co">](https://quarto.org/docs/getting-started/installation.html)</span>.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this site</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>This is a Quarto <span class="in">`book`</span> project. </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>You're able to download the entire site as a single document by clicking the download button in the upper right hand corner. </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>A Quarto project is a collection of documents (<span class="in">`qmd`</span>, <span class="in">`md`</span>, <span class="in">`Rmd`</span>, and <span class="in">`ipynb`</span> files) that are unified by a <span class="in">`_quarto.yml`</span> file. This <span class="in">`_quarto.yml`</span> file contains, among other things (from the docs):</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A way to render all or some of the files in a directory with a single command (e.g. quarto render myproject).</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A way to share YAML configuration across multiple documents.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The ability to redirect output artifacts to another directory.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed).</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>You can see the <span class="in">`_quarto.yml`</span> for this site <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/pommevilla/r3-quarto-example/blob/main/_quarto.yml)</span>.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>To learn more about Quarto projects, see the <span class="co">[</span><span class="ot">Projects section</span><span class="co">](https://quarto.org/docs/projects/quarto-projects.html)</span> of the docs.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 <!-- -->
+</section>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
@@ -331,7 +384,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./docs/first.html">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Basic Quarto Doc</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A qmd with R and Python</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </div>
