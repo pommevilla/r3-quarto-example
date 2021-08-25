@@ -1,5 +1,5 @@
 ---
-title: "A Basic Quarto Doc"
+title: "A qmd with R and Python"
 author: "Paul Villanueva"
 date: "8/13/2021"
 format:
@@ -22,12 +22,17 @@ Since Quarto based on Markdown, we can **bold** and *italicize* text. We can als
 
 # Example images
 
-Quarto supports an easy to use syntax for arranging figures on a page. For example, this layout:
+Quarto supports an easy to use syntax for arranging figures on a page. For example, this code:
 
-    :::{layout="[[1], [1, 1]]"}
-    ...
-    :::
+``` markdown
+:::{layout="[[1], [1, 1]]"}
+![Breakfast: Coffee](images/vic.jpg "Breakfast: Vietnamese iced coffee")
 
+![Lunch: Leftovers](images/leftovers.jpg "Leftovers fried rice? Fried rice leftovers? Leftover-flavored fried rice?"){width="400"}
+
+![Dinner: Spam musubi](images/spam_musubi.jpg "Oh mama we eating good tonight"){width="400"}
+:::
+```
 ...will render as:
 
 ::: {layout="[[1], [1, 1]]"}

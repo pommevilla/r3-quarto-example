@@ -1,5 +1,5 @@
 ---
-title: "A Pure Python Doc"
+title: "A qmd with only Python"
 format: html
 ---
 
@@ -55,6 +55,7 @@ def days_per_month(row):
 We can get the desired result with apply:
 
 ```{python}
+#| warning: false
 date_df = date_df.apply(lambda x: insert_days_per_month(x), axis = 1)
 date_df
 ```
@@ -64,10 +65,10 @@ date_df
 Quarto has support for interactive documents. Supported formats include:
 
 -   JavaScript: Observable JS
-
 -   R: Shiny
-
 -   Python: Jupyter Widgets are all supported, such as IPyLeaflet and Plotly
+
+
 
 Here are some examples:
 
@@ -99,3 +100,7 @@ fig = px.scatter(df, x="sepal_width", y="sepal_length",
                  trendline="ols", template="simple_white")
 fig.show()
 ```
+
+## Learning more
+
+To learn more about using interactive documents with Quarto, see the [Interactive Docs section](https://quarto.org/docs/interactive/) of the Quarto documentation.
