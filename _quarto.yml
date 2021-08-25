@@ -1,6 +1,9 @@
 project:
   type: book
 
+execute:
+  freeze: true
+  
 book:
   downloads: [docx, pdf]
   title: "Example Quarto Site for R"
@@ -10,9 +13,8 @@ book:
   toc: true
   
   sidebar:
-    collapse-level: 1
     style: "docked"
-    align: "center"
+    align: left
 
   navbar:
     type: light
@@ -25,13 +27,12 @@ book:
       
   chapters:
       - index.qmd
-      - first.qmd
-      - second.qmd
-      - third.ipynb
-      - four.qmd
-      - example_sites.qmd
+      - docs/first.qmd
+      - docs/second.qmd
+      - docs/third.ipynb
+      - docs/four.qmd
 
-bibliography: references.bib
+bibliography: docs/references.bib
 
 format:
   html:
