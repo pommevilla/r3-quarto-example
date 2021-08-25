@@ -27,12 +27,12 @@ book:
       
   chapters:
       - index.qmd
-      - docs/first.qmd
-      - docs/second.qmd
-      - docs/third.ipynb
-      - docs/four.qmd
+      - first.qmd
+      - second.qmd
+      - third.ipynb
+      - four.qmd
 
-bibliography: docs/references.bib
+bibliography: references.bib
 
 format:
   html:
