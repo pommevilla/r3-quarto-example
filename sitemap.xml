@@ -2,34 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/pommevilla.github.io/r3-quarto-example/index.html</loc>
-    <lastmod>2021-08-25T03:32:00.591Z</lastmod>
+    <lastmod>2021-08-25T16:56:24.890Z</lastmod>
   </url>
   <url>
-    <loc>https:/pommevilla.github.io/r3-quarto-example/first.html</loc>
-    <lastmod>2021-08-25T03:32:00.594Z</lastmod>
+    <loc>https:/pommevilla.github.io/r3-quarto-example/docs/first.html</loc>
+    <lastmod>2021-08-25T16:56:24.907Z</lastmod>
   </url>
   <url>
-    <loc>https:/pommevilla.github.io/r3-quarto-example/second.html</loc>
-    <lastmod>2021-08-25T03:32:00.596Z</lastmod>
+    <loc>https:/pommevilla.github.io/r3-quarto-example/docs/second.html</loc>
+    <lastmod>2021-08-25T16:56:24.912Z</lastmod>
   </url>
   <url>
-    <loc>https:/pommevilla.github.io/r3-quarto-example/third.html</loc>
-    <lastmod>2021-08-25T03:32:00.597Z</lastmod>
+    <loc>https:/pommevilla.github.io/r3-quarto-example/docs/third.html</loc>
+    <lastmod>2021-08-25T16:56:24.913Z</lastmod>
   </url>
   <url>
-    <loc>https:/pommevilla.github.io/r3-quarto-example/four.html</loc>
-    <lastmod>2021-08-25T03:32:00.610Z</lastmod>
-  </url>
-  <url>
-    <loc>https:/pommevilla.github.io/r3-quarto-example/example_sites.html</loc>
-    <lastmod>2021-08-25T03:32:00.611Z</lastmod>
+    <loc>https:/pommevilla.github.io/r3-quarto-example/docs/four.html</loc>
+    <lastmod>2021-08-25T16:56:24.930Z</lastmod>
   </url>
   <url>
     <loc>https:/pommevilla.github.io/r3-quarto-example/Example-Quarto-Site-for-R.pdf</loc>
-    <lastmod>2021-08-25T03:31:57.482Z</lastmod>
+    <lastmod>2021-08-25T16:56:21.296Z</lastmod>
   </url>
   <url>
     <loc>https:/pommevilla.github.io/r3-quarto-example/Example-Quarto-Site-for-R.docx</loc>
-    <lastmod>2021-08-25T03:31:59.424Z</lastmod>
+    <lastmod>2021-08-25T16:56:24.243Z</lastmod>
   </url>
 </urlset>
