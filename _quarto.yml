@@ -1,0 +1,51 @@
+project:
+  type: book
+
+book:
+  downloads: [docx, pdf]
+  title: "Lunch and Learn and Quarto"
+  page-navigation: true
+  site-url: https://pommevilla.github.io/lunch_and_learn_and_quarto
+  repo-url: https://github.com/pommevilla/lunch_and_learn_and_quarto
+  toc: true
+  
+  sidebar:
+    collapse-level: 1
+    style: "docked"
+    align: "center"
+
+  navbar:
+    type: light
+    title: "Lunch and Learn and Quarto"
+    right:
+      - text: "Old Workbench docs"
+        url: https://docs.rstudio.com/ide/server-pro/
+      - text: "New Workbench docs"
+        url: https://docs.rstudio.com/ide/server-pro/latest/
+      - text: "Quarto docs"
+        url: https://quarto.org
+      
+  chapters:
+    - part: "Section title"
+      chapters:
+        - index.qmd
+        - first.qmd
+        - second.qmd
+        - third.ipynb
+        - four.qmd
+
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles/styles.scss
+    code-background: true
+    number-sections: false
+  pdf:
+    code-background: true
+
+  docx:
+    toc: true

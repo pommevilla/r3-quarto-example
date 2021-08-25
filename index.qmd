@@ -1,0 +1,6 @@
+---
+title: "Lunch and Learn and Quarto"
+---
+
+This is an example Quarto project made for RStudio's Lunch and Learn on 8/3/2021.
+To learn more about Quarto visit <https://quarto.org>.
