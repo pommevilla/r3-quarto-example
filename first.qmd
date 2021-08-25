@@ -1,5 +1,5 @@
 ---
-title: "First Quarto"
+title: "A Basic Quarto Doc"
 author: "Paul Villanueva"
 date: "8/13/2021"
 format:
@@ -149,7 +149,7 @@ $$
 Prove that $f$ is not a continuous function.
 :::
 
-**Proof.** Let $\varepsilon = \frac{1}{2}$ and choose any $x \in \mathbb{Q}$. For any $\delta > 0$, we can find some $c \not\in \mathbb{Q}$ such that $|x - c| < \delta$ since the irrationals are dense in $\mathbb{R}$. But then$|f(x) - f(c)| = |1 - 0| = 1 > \frac{1}{2}$, showing that $f$ is not continuous at $x$. $\blacksquare$
+**Proof.** Let $\varepsilon = \frac{1}{2}$ and choose any $x \in \mathbb{Q}$. For any $\delta > 0$, we can find some $c \not\in \mathbb{Q}$ such that $|x - c| < \delta$ since the irrationals are dense in $\mathbb{R}$. But then $|f(x) - f(c)| = |1 - 0| = 1 > \frac{1}{2}$, showing that $f$ is not continuous at $x$. $\blacksquare$
 
 ## Adding references
 

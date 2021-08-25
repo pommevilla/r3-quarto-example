@@ -1,0 +1,10 @@
+---
+title: "Further Reading"
+---
+
+If you want to learn more about Quarto, the best place to start is the [Quarto documentation](https://quarto.org).
+While you're there, check out the [gallery](https://quarto.org/docs/gallery/) to see some examples of what is possible with Quarto.
+
+Here are some other sites that people have made with Quarto:
+
+- The [EarthData Cloud Cookbook](https://github.com/NASA-Openscapes/earthdata-cloud-cookbook) from NASA and Openscapes is an excellent example of how Quarto helps users collaborate. Because the data that is used in this repo requires authentication and sometimes specific virtual environments, it is not always possible for team members to render all of the site documents before every push. However, by taking advantage of Quarto's `freeze` option, users only have to execute the code on the documents that they changed before pushing. 

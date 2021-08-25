@@ -3,10 +3,10 @@ project:
 
 book:
   downloads: [docx, pdf]
-  title: "Lunch and Learn and Quarto"
+  title: "Example Quarto Site for R"
   page-navigation: true
-  site-url: https://pommevilla.github.io/lunch_and_learn_and_quarto
-  repo-url: https://github.com/pommevilla/lunch_and_learn_and_quarto
+  site-url: https://pommevilla.github.io/r3-quarto-example
+  repo-url: https://github.com/pommevilla/r3-quarto-example
   toc: true
   
   sidebar:
@@ -16,24 +16,20 @@ book:
 
   navbar:
     type: light
-    title: "Lunch and Learn and Quarto"
+    title: "Example Quarto Site for R3"
     right:
-      - text: "Old Workbench docs"
-        url: https://docs.rstudio.com/ide/server-pro/
-      - text: "New Workbench docs"
-        url: https://docs.rstudio.com/ide/server-pro/latest/
+      - text: "R3 @ R/Medicine"
+        url: https://r3-rmedicine.netlify.app/
       - text: "Quarto docs"
         url: https://quarto.org
       
   chapters:
-    - part: "Section title"
-      chapters:
-        - index.qmd
-        - first.qmd
-        - second.qmd
-        - third.ipynb
-        - four.qmd
-
+      - index.qmd
+      - first.qmd
+      - second.qmd
+      - third.ipynb
+      - four.qmd
+      - example_sites.qmd
 
 bibliography: references.bib
 
@@ -44,6 +40,9 @@ format:
       - styles/styles.scss
     code-background: true
     number-sections: false
+    code-tools:
+      source: true
+      
   pdf:
     code-background: true
 

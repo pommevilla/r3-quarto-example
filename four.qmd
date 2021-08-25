@@ -2,7 +2,10 @@
 title: "Sample Analysis"
 ---
 
-```{r, message=FALSE}
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
 library(vegan)
 library(ggplot2)
 library(here)
@@ -14,11 +17,16 @@ library(ggtext)
 theme_set(theme_minimal())
 ```
 
+This is some preliminary analysis I did for an experiment we're doing to quantify the effects of crop priming on nitrogen fixation rates.
+You can see the latest version of this analysis [at my research journal](https://pommevilla.github.io/crop_priming/analysis_so_far.html) and learn more about the experiment at [my website](https://pommevilla.netlify.app/project/20210823_icrop_priming/).
+Also note that you can view the source code of this page by click on the `Code` button to the right of the title of this page.
+
+
 ### Data
 
-Reading in data:
-
-```{r fold=TRUE}
+```{r}
+#| code-fold: true
+#| code-summary: "Reading in the data"
 data.priming <- read.csv(here("data", "priming_amoA_deltaCt.csv"), header = T) %>% 
   rename(sample_id = X) 
 
@@ -26,10 +34,10 @@ data.raw <- read.csv(here("data", "priming_amoA_rawCt.csv"), header = T) %>%
   rename(sample_id = X)
 
 data.priming.long <- data.priming %>% 
-  pivot_longer(cols = amoA.001:amoA.078, names_to = "amoA", values_to = "deltaCT")
+  pivot_longer(cols = starts_with("amoA"), names_to = "amoA", values_to = "deltaCT")
 
 data.raw.long <- data.raw %>% 
-  pivot_longer(cols = amoA.001:amoA.078, names_to = "amoA", values_to = "CT")
+  pivot_longer(cols = starts_with("amoA"), names_to = "amoA", values_to = "CT")
 
 data.priming.long$sample_id <- fct_reorder(data.priming.long$sample_id, parse_number(data.priming.long$sample_id))
 
@@ -309,7 +317,7 @@ All the code below does is perform an ANOVA of the gene's abundance against all 
 and all of their interactions.
 
 ```{r}
-formulae <- lapply(colnames(data.priming.reduced %>% select(amoA.001:amoA.074)), function(x) as.formula(paste0(x, " ~ fert_level * crop * timepoint * addition")))
+formulae <- lapply(colnames(data.priming.reduced %>% select(starts_with("amoA"))), function(x) as.formula(paste0(x, " ~ fert_level * crop * timepoint * addition")))
 
 res <- lapply(formulae, function(x) broom::tidy(aov(x, data = data.priming.reduced)))
 names(res) <- format(formulae)
@@ -359,7 +367,7 @@ Let's start by visualizing the presence/absence table:
 #| code-summary: "Presence/absence plot"
 #| message: false
 amoA_presence_absence %>% 
-  pivot_longer(cols = amoA.001:amoA.078, names_to = "amoA", values_to = "presence") %>% 
+  pivot_longer(cols = starts_with("amoA"), names_to = "amoA", values_to = "presence") %>% 
   mutate(amoA = str_sub(amoA, -2),
          amoA = paste0("amoA_AOB_p", amoA),
          presence = as.factor(presence)) %>% 
@@ -560,15 +568,19 @@ Standard deviations, mean
 summaries <- richness %>% 
   group_by(Metric, fert_level) %>% 
   summarize(mean_val = mean(Value), 
-            sd_val = sd(Value) / 4,
-            .groups = "drop") 
+            sd_val = sd(Value),
+            n = n(),
+            .groups = "drop") %>% 
+  mutate(se = abs((sd_val / sqrt(n)) * qt(0.025, n - 1) )) %>% 
+  mutate(ymax = mean_val + se, 
+         ymin = mean_val - se) 
 
 this_annotation <- data.frame(
   Metric = c("Observed", "Shannon"),
   lab = c("***", "***"),
   x = 1.5,
-  y = c(50 + 5, 4 + 0.5),
-  lineheights = c(50 + 2, 4 + 0.25)
+  y = c(50 + 5 + 2, 4 + 0.5),
+  lineheights = c(50 + 5, 4 + 0.25)
 )
 
 summaries %>%  
@@ -591,7 +603,7 @@ summaries %>%
     panel.border = element_rect(color = "black", size = 1, fill = "NA")
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.1))) + 
-  geom_errorbar(aes(ymin = mean_val - sd_val, ymax = mean_val + sd_val, width = 0.5)) + 
+  geom_errorbar(aes(ymin = ymin, ymax = ymax, width = 0.5)) + 
   geom_text(
     data = this_annotation,
     aes(x = x, y = y, label = lab),
@@ -741,11 +753,11 @@ comp_barplot(ps, "ta1",
 
 Two big things pop out:
 
-* species distribution is more even in the fertilized group. This makes sense given previous results
+* Species distribution is more even in the fertilized group. This makes sense given previous results
 showing that Shannon entropy is higher and beta diversity is lower in the fertilized group. You can also 
 see that the communities just look more like each other in the fertilized group, which manifests in shorter
 distance-to-centroids/lower community variation.
-* There's more green in the fertilized group.
+* There's more green in the fertilized group, suggesting that Nitrosolobus multiformus and Nitrosospira sp. En13 abundances are significantly affected by fertilization addition.
 
 ## Statistics on a best BLAST hit level
 
@@ -759,7 +771,7 @@ pa_count <- ps %>%
   otu_table() %>%
   data.frame %>%
   rownames_to_column(var = "sample_id") %>% 
-  pivot_longer(amoA.001:amoA.074) 
+  pivot_longer(starts_with("amoA")) 
 
 
 org_table <- tax_table(ps) %>% 

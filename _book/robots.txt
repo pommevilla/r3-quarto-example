@@ -1,1 +1,1 @@
-Sitemap: https://pommevilla.github.io/lunch_and_learn_and_quarto/sitemap.xml
+Sitemap: https://pommevilla.github.io/r3-quarto-example/sitemap.xml

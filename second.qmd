@@ -1,9 +1,10 @@
 ---
-title: "Second: A Pure Python qmd"
+title: "A Pure Python Doc"
 format: html
 ---
 
-This is a pure Python qmd document. Since there are no R code chunks, it is executed via the Jupyter kernel.
+This is a pure Python qmd document. Since there are no R code chunks, it is executed via the Jupyter kernel. Because it's written in a `qmd` file, all of the Rmarkdown/knitr functionality you're used to can be used here. Here is some example code below.
+
 
 ## Adding days per month from date range to a dataframe
 

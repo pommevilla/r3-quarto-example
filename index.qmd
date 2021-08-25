@@ -1,6 +1,8 @@
 ---
-title: "Lunch and Learn and Quarto"
+title: "Intro"
 ---
 
-This is an example Quarto project made for RStudio's Lunch and Learn on 8/3/2021.
-To learn more about Quarto visit <https://quarto.org>.
+This is an example Quarto project made for the Reproducible Research with R workshop at the R/Medicine conference on 8/25/2021. 
+
+This is a Quarto `book` project. A `book` project is just like a site, so it uses the same styling and structure as the `site`, but it has a few extra things. 
+Most notably, you're able to download the entire site as a single document by clicking the download button in the upper right hand corner. 
